@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="thermo" style="background:url('thermometer03.png') no-repeat top left; width:255px; height:900px; position:absolute; left:0px; top:0px">
+
+	<div style="background:#FF0000; width:50px; height:6px; left:90px; bottom:268px; position:absolute;" id="tempmeter"></div>
+
+	</div>	
+</div>
+
+<input type=text onChange="showtemp(this.value)" onClick="showtemp(this.value)" value="0" style="position:absolute; top:1000px">
+
+
+<script>
+
+
+function showtemp(temp) {
+	var baseline = 6;
+	document.getElementById('tempmeter').style.height = baseline + (temp * 5.7) + "px";
+}
+
+
+function toCelsius(f) {
+    return (5/9) * (f-32);
+}
+
+function toFahrenheit(c) {
+	return 9 / 5 * c + 32; 
+}
+
+
+</script>
+
+</body>
+</html>
